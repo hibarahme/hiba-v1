@@ -1,0 +1,121 @@
+<!doctype html>
+<html data-theme="light">
+  <head>
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <meta charset="utf-8" />
+    <title>Hiba | Fresh V1 Prototype</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+
+    <main>
+      <span class="tag">Hiba · Fresh V1 prototype</span>
+      <h1>Fresh while you wait</h1>
+      <p class="lede">
+        Add a Fresh top-up while your food is on the way. Delivery is free on
+        baskets of $10 or more.
+      </p>
+      <div class="chips" style="margin-top: 14px">
+        <span class="chip">$10+ basket = free delivery</span
+        ><span class="chip">Buy again first</span
+        ><span class="chip">Category rows</span
+        ><span class="chip warn">Paid ranking (CPC)</span>
+      </div>
+
+      <section
+        class="panel"
+        id="p-v1"
+        role="tabpanel"
+        aria-labelledby="t-v1"
+        style="margin-top: 28px"
+      >
+        <div class="anim-wrap">
+          <div id="anim" aria-label="Animated V1 walkthrough"></div>
+          <div class="anim-side">
+            <span class="tag" style="margin: 0">Walkthrough</span>
+            <h3 style="font-size: 20px">From checkout to delivery</h3>
+            <p id="anim-cap"></p>
+            <div class="dots" id="anim-dots"></div>
+            <div class="row">
+              <button type="button" class="ctl" id="anim-play">Pause</button
+              ><button type="button" class="ctl" id="anim-restart">
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+        <p style="color: var(--muted); font-size: 14px; margin: 0 0 16px">
+          Try adding or removing items below. The basket updates across all
+          screens.
+        </p>
+        <div class="screens" id="v1screens"></div>
+        <div class="note">
+          <div>
+            <h3>Screen layout</h3>
+            <p>
+              Each screen follows the same order: tracker, add-ons, delivery
+              progress, then the main button. Item names, prices and the $10
+              minimum stay consistent.
+            </p>
+          </div>
+          <div>
+            <h3>How items are chosen</h3>
+            <ul>
+              <li>
+                Returning Fresh customers: Buy again, from their past Fresh
+                orders
+              </li>
+              <li>
+                Then rows by category, from the brief’s top-up basket: chips
+                &amp; snacks, drinks, ice cream &amp; chocolate
+              </li>
+              <li>
+                First-time customers see the category rows without Buy again
+              </li>
+              <li>
+                Brands paying per click (with a minimum monthly spend) rank
+                first in their row, with a small “Sponsored” label
+              </li>
+              <li>
+                Only items in stock at the Fresh dark store that serves the
+                address are shown; a row with too few is hidden
+              </li>
+              <li>Nothing is matched to the food order in V1</li>
+              <li>
+                Copy states the goal (“Add $X, get $0 delivery”), and checkout
+                shows free delivery at $0.00
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Before launch</h3>
+            <ul>
+              <li>Fresh order history and stock</li>
+              <li>
+                Fee rules: $10 minimum (break-even $8 at 25% margin, assumed $2
+                delivery cost)
+              </li>
+              <li>Experiment tools and click logging for CPC billing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <p class="foot">
+        Prototype only, not the live Toters app. Item names, prices and delivery
+        fees are examples. The $10 minimum uses Toters’ $8–10 top-up range,
+        roughly 25% margin and an estimated $2 delivery cost.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
